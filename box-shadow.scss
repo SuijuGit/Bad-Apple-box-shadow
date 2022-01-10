@@ -1,0 +1,39 @@
+@mixin pixelize($matrix){
+    $ret:"";
+
+    @for $i from 1 through length($matrix){
+        $row:nth($matrix,$i);
+
+        @for $j from 1 through length($row){
+            $dot:nth($row,$j);
+
+            @if $dot !=0 {
+
+                @if $ret != "" {
+                    $ret:$ret+",";
+                }
+
+                $color:nth($heart-colors,$dot);
+                $ret:$ret+($j*1px)+" "+($i*1px)+" "+ $color;
+            }
+        }
+    }
+    box-shadow:unquote($ret+";");
+}
+
+$heart-colors:(#000);
+
+//put the numeric data of the images here
+
+@mixin keyframes($FINISH) {
+    @keyframes #{$FINISH} {
+      @content;
+    }
+}
+@mixin animation($FINISH) {
+    animation: $FINISH;
+}
+@include keyframes(FINISH) {
+    //put code of the keyframes here 
+    //e.g. 0.076%,0.1519% {@include pixelize(($pic0001));} 
+}
