@@ -1,6 +1,6 @@
 # Bad-Apple-box-shadow
 code of the Bad Apple!! movie / with box-shadow(CSS) only.
-the finished product: https://www.dropbox.com/s/o59h3j5vvi7x5j7/BadApple.html?dl=0
+Here is the finished product: https://www.dropbox.com/s/o59h3j5vvi7x5j7/BadApple.html?dl=0
 
 # How to make
 1. Convert the original movie into images per 5 frames.
